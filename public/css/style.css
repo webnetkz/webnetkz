@@ -1,0 +1,43 @@
+@import "animation/header.css";
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: sans-serif;
+}
+.nS {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#content {
+    animation: header 7s infinite;
+    padding-top: 1em;
+    width: 80%;
+    margin-left: 10%;
+    height: 100%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+header {
+    width: 80%;
+    padding: 1px;
+    margin-left: 10%;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    animation: header 1s infinite;
+}
+ul {
+    text-align: center;
+    width: 90%;
+    margin-left: 3%;
+    height: 4em;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    animation: header 500ms infinite;
+}
+.menuItem {
+    margin: 5px;
+    margin-top: 1em;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(63, 105, 230);
+}

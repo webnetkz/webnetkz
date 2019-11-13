@@ -1,0 +1,8 @@
+/* Styles for mobile device */
+@media only screen and (max-width: 900px) {
+    body {
+        box-sizing: border-box;
+        margin: 0;
+    }
+    
+}
