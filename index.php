@@ -29,17 +29,6 @@
         <div id="content">
             <header>
                 <ul>
-                    <?php
-                    
-                        if(!empty($catRes)) {
-                            foreach($catRes as $k => $v) {
-                                echo '<li class="menuItem hoverBtn" style="margin-left: 5px;">';
-                                echo    '<a href="'.$v['title'].'.php" class="nS">'.$v['title'].'</a>';
-                                echo '</li>';
-                            }
-                        }
-
-                    ?>
                     <li class="menuItem hoverBtn">
                         <a href="archive.php" class="nS">Архив</a>
                     </li>
@@ -51,6 +40,19 @@
                     </li>
                 </ul>
             </header>
+
+
+            <?php
+            echo '<form action="" method="post">';        
+                    if(!empty($catRes)) {
+                        foreach($catRes as $k => $v) {
+                            echo '<input class="cats hoverBtn" type="submit" value="';
+                            echo  $v['title'] .' / '. $v['title'];
+                            echo '">';
+                        }
+                    }
+            echo '</form>';
+            ?>
         </div>
     <!-- JS scripts -->
 

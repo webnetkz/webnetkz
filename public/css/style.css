@@ -3,6 +3,9 @@ body {
     box-sizing: border-box;
     margin: 0;
     font-family: sans-serif;
+    background: fixed;
+    background-size: cover;
+    background-image: url('../img/bg.jpg');
 }
 .nS {
     text-decoration: none;
@@ -14,15 +17,18 @@ body {
     width: 80%;
     margin-left: 10%;
     height: 100%;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 30px rgba(55, 55, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 header {
     width: 80%;
     padding: 1px;
     margin-left: 10%;
+    margin-bottom: 2em;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    animation: header 1s infinite;
+    animation: header 3s infinite;
+    background-color: rgba(63, 105, 230, 0.3);
 }
 ul {
     text-align: center;
@@ -31,7 +37,8 @@ ul {
     height: 4em;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    animation: header 500ms infinite;
+    animation: header 1500ms infinite;
+    background-color: rgba(63, 5, 230, 0.3);
 }
 .menuItem {
     margin: 5px;
@@ -40,4 +47,47 @@ ul {
     display: inline-block;
     padding: 10px;
     background-color: rgb(63, 105, 230);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+form {
+    text-align: center;
+}
+.btn {
+    font-size: 1.3em;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 50px;
+    background-color: rgb(63, 105, 230);
+    color: rgb(255, 255, 255);
+    transition-duration: 500ms;
+    outline: none;
+}
+.btn:hover {
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.8);
+}
+.inp {
+    outline: none;
+    font-size: 1.3em;
+    padding: 10px;
+    border-radius: 50px;
+    width: 500px;
+    text-align: center;
+    margin: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    transition-duration: 500ms;
+}
+.inp:focus {
+    box-shadow: 10px 0 10px rgba(0, 0, 0, 0.8);
+}
+.cats {
+    display: block;
+    padding: 10px;
+    width: 98%;
+    margin: 10px;
+    border: 2px outset;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 200px;
+    background-color: rgba(111, 222, 111, 0.2);
+    outline: none;
 }
