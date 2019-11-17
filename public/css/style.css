@@ -1,8 +1,9 @@
 @import "animation/header.css";
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 body {
     box-sizing: border-box;
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Oswald';
     background: fixed;
     background-size: cover;
     background-image: url('../img/bg.jpg');
@@ -12,11 +13,12 @@ body {
     color: rgb(255, 255, 255);
 }
 #content {
+    padding-bottom: 2em;
     animation: header 7s infinite;
     padding-top: 1em;
+    height: 100%;
     width: 80%;
     margin-left: 10%;
-    height: 100%;
     box-shadow: 0 0 30px rgba(55, 55, 0, 0.8);
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -42,7 +44,7 @@ ul {
 }
 .menuItem {
     margin: 5px;
-    margin-top: 1em;
+    margin-top: 0.5em;
     border-radius: 50px;
     display: inline-block;
     padding: 10px;
@@ -90,4 +92,30 @@ form {
     border-radius: 200px;
     background-color: rgba(111, 222, 111, 0.2);
     outline: none;
+}
+.post {
+    box-sizing: border-box;
+    position: relative;
+    width: 80%;
+    left: 10%;
+    height: 20em;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+h3 {
+    text-align: center;
+}
+.imgPost {
+    display: inline-block;
+    height: 15em;
+    margin-right: 10px;
+    float: left;
+}
+.line {
+    display: inline;
+}
+footer {
+
 }

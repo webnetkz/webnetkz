@@ -5,7 +5,7 @@
     // Подключение БД
     require_once 'app/pdo/connect.php';
 
-    $catSql = "SELECT `title` FROM `categories`;";
+    $catSql = "SELECT * FROM `categories`;";
     $catRes = $pdo->query($catSql);
     $catRes = $catRes->fetchAll(PDO::FETCH_ASSOC);
 ?>
@@ -30,6 +30,9 @@
             <header>
                 <ul>
                     <li class="menuItem hoverBtn">
+                        <a href="index.php" class="nS">Главная</a>
+                    </li>
+                    <li class="menuItem hoverBtn">
                         <a href="archive.php" class="nS">Архив</a>
                     </li>
                     <li class="menuItem hoverBtn">
@@ -46,14 +49,38 @@
             echo '<form action="" method="post">';        
                     if(!empty($catRes)) {
                         foreach($catRes as $k => $v) {
-                            echo '<input class="cats hoverBtn" type="submit" value="';
-                            echo  $v['title'] .' / '. $v['title'];
+                            echo '<input class="cats hoverBtn" type="submit" name="cat" value="';
+                            echo  $v['titlekaz'] .' / '. $v['title'];
                             echo '">';
                         }
                     }
             echo '</form>';
+
+            if(!empty($_POST['cat'])) {
+                $p = $_POST['cat'];
+                
+                $sqlPost = 'SELECT * FROM `post` WHERE catP = "'.$p.'";';
+                $resPost = $pdo->query($sqlPost);
+                $resPost = $resPost->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach($resPost as $k => $v) {
+                    if($v['arc'] !== '1') {
+                        echo '<div class="post">';
+                        echo '<h3>'.$v['header'].'</h3>';
+                        echo '<img src="'.$v['src'].'" class="imgPost">';
+                        echo '<p class="line">'.$v['text'].'</p>';
+                        echo '</div>';
+                    }
+
+                }
+            }
+
             ?>
+        <!--<footer>
+            2019 ©
+        </footer>-->
         </div>
+
     <!-- JS scripts -->
 
 </body>

@@ -108,7 +108,7 @@ require_once 'app/pdo/connect.php';
                     $catP = $_POST['catPost'];
 
                     // Директория для размещения файла
-                    $destiation_dir = dirname(__FILE__).'/files/'.$fileName;
+                    $destiation_dir = 'files/'.$fileName;
                     // Перемещаем файл в желаемую директорию
                     move_uploaded_file($fileTmp, $destiation_dir );
 
