@@ -29,8 +29,8 @@
     </head>
     <body>
     <!-- Append blocks -->
-        <div id="content">
-            <header>
+            <img src="public/img/header.png" class="header">
+            <header style="position: fixed; left: 10%; top: 0;">
                 <ul>
                     <li class="menuItem hoverBtn">
                         <a href="index.php" class="nS">Негізгі бет<br> Главная</a>
@@ -49,152 +49,9 @@
                     </li>
                 </ul>
             </header>
-             <pre>
+            <div id="content" style="background: none; margin-top: 30%;">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-             </pre>
-
-            <div class="fourImg">
-                <img src="public/img/f1.png" class="imgFour">
-                <img src="public/img/f2.png" class="imgFour">
-                <img src="public/img/f3.png" class="imgFour">
-                <img src="public/img/f4.png" class="imgFour">
             </div>
-            <footer>
-                    <div class="hr"></div>
-                <h1 class="indexH1">НАШИ УЧАСТНИКИ</h1>
-
-                <!-- Flickity HTML init -->
-                <div class="carousel" data-flickity='{ "groupCells": true }'>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                </div>
-                <div class="hr"></div>
-            </footer>
-
-            <?php /*
-            echo '<form action="" method="post">';        
-                    if(!empty($catRes)) {
-                        foreach($catRes as $k => $v) {
-                            echo '<input class="cats hoverBtn" type="submit" name="cat" value="';
-                            echo  $v['titlekaz'] .' / '. $v['title'];
-                            echo '">';
-                        }
-                    }
-            echo '</form>';
-
-            if(!empty($_POST['cat'])) {
-                $p = $_POST['cat'];
-                
-                $sqlPost = 'SELECT * FROM `post` WHERE catP = "'.$p.'";';
-                $resPost = $pdo->query($sqlPost);
-                $resPost = $resPost->fetchAll(PDO::FETCH_ASSOC);
-
-                foreach($resPost as $k => $v) {
-                    if($v['arc'] !== '1') {
-                        echo '<div class="post">';
-                        echo '<h3>'.$v['header'].'</h3>';
-                        echo '<img src="'.$v['src'].'" class="imgPost">';
-                        echo '<p class="line">'.$v['text'].'</p>';
-                        echo '</div>';
-                    }
-
-                }
-            }
-
-            */?>
-        <!--<footer>
-            2019 ©
-        </footer>-->
-        </div>
 
     <!-- JS scripts -->
 

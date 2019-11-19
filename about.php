@@ -29,171 +29,45 @@
     </head>
     <body>
     <!-- Append blocks -->
-        <div id="content">
-            <header>
-                <ul>
-                    <li class="menuItem hoverBtn">
-                        <a href="index.php" class="nS">Негізгі бет<br> Главная</a>
-                    </li>
-                    <li class="menuItem hoverBtn">
-                        <a href="conk.php" class="nS">Байкаулар<br> Конкурсы</a>
-                    </li>
-                    <li class="menuItem hoverBtn">
-                        <a href="archive.php" class="nS">Мұрағат<br> Архив</a>
-                    </li>
-                    <li class="menuItem hoverBtn">
-                        <a href="about.php" class="nS">Өтінім үлгісі<br> Форма заявки</a>
-                    </li>
-                    <li class="menuItem hoverBtn">
-                        <a href="contact.php" class="nS">Байланыс<br> Контакты</a>
-                    </li>
-                </ul>
-            </header>
-             <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-             </pre>
-
-            <div class="fourImg">
-                <img src="public/img/f1.png" class="imgFour">
-                <img src="public/img/f2.png" class="imgFour">
-                <img src="public/img/f3.png" class="imgFour">
-                <img src="public/img/f4.png" class="imgFour">
-            </div>
-            <footer>
-                    <div class="hr"></div>
-                <h1 class="indexH1">НАШИ УЧАСТНИКИ</h1>
-
-                <!-- Flickity HTML init -->
-                <div class="carousel" data-flickity='{ "groupCells": true }'>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell">
-                    <img src="public/img/scroll/1.png" class="imgScroll" alt="">
-                    <p class="pScrollB">Андрей Симонов</p>
-                    <p class="pScroll">12 лет</p>
-                </div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                <div class="carousel-cell"></div>
-                </div>
-                <div class="hr"></div>
-            </footer>
-
-            <?php /*
-            echo '<form action="" method="post">';        
-                    if(!empty($catRes)) {
-                        foreach($catRes as $k => $v) {
-                            echo '<input class="cats hoverBtn" type="submit" name="cat" value="';
-                            echo  $v['titlekaz'] .' / '. $v['title'];
-                            echo '">';
-                        }
-                    }
-            echo '</form>';
-
-            if(!empty($_POST['cat'])) {
-                $p = $_POST['cat'];
-                
-                $sqlPost = 'SELECT * FROM `post` WHERE catP = "'.$p.'";';
-                $resPost = $pdo->query($sqlPost);
-                $resPost = $resPost->fetchAll(PDO::FETCH_ASSOC);
-
-                foreach($resPost as $k => $v) {
-                    if($v['arc'] !== '1') {
-                        echo '<div class="post">';
-                        echo '<h3>'.$v['header'].'</h3>';
-                        echo '<img src="'.$v['src'].'" class="imgPost">';
-                        echo '<p class="line">'.$v['text'].'</p>';
-                        echo '</div>';
-                    }
-
-                }
-            }
-
-            */?>
-        <!--<footer>
-            2019 ©
-        </footer>-->
+        <img src="public/img/headerSlim.png" class="headerSlim">
+        <header style="position: fixed; left: 10%; top: 0;">
+            <ul>
+                <li class="menuItem hoverBtn">
+                    <a href="index.php" class="nS">Негізгі бет<br> Главная</a>
+                </li>
+                <li class="menuItem hoverBtn">
+                    <a href="conk.php" class="nS">Байкаулар<br> Конкурсы</a>
+                </li>
+                <li class="menuItem hoverBtn">
+                    <a href="archive.php" class="nS">Мұрағат<br> Архив</a>
+                </li>
+                <li class="menuItem hoverBtn">
+                    <a href="about.php" class="nS">Өтінім үлгісі<br> Форма заявки</a>
+                </li>
+                <li class="menuItem hoverBtn">
+                    <a href="contact.php" class="nS">Байланыс<br> Контакты</a>
+                </li>
+            </ul>
+        </header>
+        <div id="content" style=" margin-top: 400px;">
+            <h1 class="indexH1">Республиканский конкурс «Оформление территорий/помещений»</h1>
+            <p class="pScroll" style="margin-left: 12%;">01 Сентября – 30 Ноября</p>
+            <p>Осень в учебных учреждениях отмечена большим количеством ярких осенних праздников и развлечений. Каждый педагог или воспитатель старается организовать уникальный праздник, провести досуг на тему осени, устроить поход в парк и, конечно, воплотить в жизнь идеи по изготовлению оригинальных осенних поделок.</p>
+            <p>Мы приглашаем всех талантливых педагогов, воспитателей и специалистов образовательных учреждений принять участие в нашем профессиональном конкурсе и поделиться своим опытом в проведении осенних мероприятий.</p>
+            <p>В рамках нашего нового конкурса Вы можете проявить себя и пополнить свое профессиональное портфолио.</p>
+            <p>На конкурс принимаются методические разработки, сценарии мероприятий, фотографии, презентации, оформление помещений/территорий, информационные материалы.</p>
+            <p>Будем рады, если наш конкурс поможет его участникам раскрыться и проявить свои таланты и творческие способности.</p>
+            <h3>Сроки проведения Конкурса:</h3>
+            <p class="time">- Прием работ с 1 сентября 2019 года по 30 ноября 2019 года</p>
+            <p class="time">- Определение победителей с 1 декабря 2019 года по 9 декабря 2019 года</p>
+            <p class="time">- Публикация результатов конкурса 10 декабря 2019 года</p>
+
+
+            
+            <a href="қатысушы өтінімі-заявка участника.docx" download style="float: right; margin-right: 50px;">
+                <img src="public/img/appendWork.png" alt="">
+            </a>
+            <h1 class="indexH1" style="text-align: left; margin-left: 15%;">Работы:</h1>
         </div>
 
     <!-- JS scripts -->
