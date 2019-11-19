@@ -39,11 +39,12 @@ body {
     margin-left: 1em;
 }
 header {
+    position: fixed;
     margin-top: 2em;
     width: 80%;
     height: 8em;
     padding: 1px;
-    margin-left: 10%;
+    left: 10%;
     margin-bottom: 2em;
     border-radius: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -136,9 +137,9 @@ h3 {
     display: inline;
 }
 footer {
-    height: 40%;
-    width: 140%;
-    margin-left: -20%;
+    height: 44%;
+    width: 127.5%;
+    margin-left: -15%;
     background-image: url('../img/footer.png');
     background-size: cover;
 }
