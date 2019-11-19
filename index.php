@@ -36,7 +36,7 @@
                         <a href="index.php" class="nS">Негізгі бет<br> Главная</a>
                     </li>
                     <li class="menuItem hoverBtn">
-                        <a href="archive.php" class="nS">Байкаулар<br> Конкурсы</a>
+                        <a href="conk.php" class="nS">Байкаулар<br> Конкурсы</a>
                     </li>
                     <li class="menuItem hoverBtn">
                         <a href="archive.php" class="nS">Мұрағат<br> Архив</a>
@@ -90,7 +90,7 @@
 
 
 
-             
+
 
 
 
