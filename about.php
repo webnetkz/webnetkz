@@ -64,7 +64,7 @@
 
 
             
-            <a href="қатысушы өтінімі-заявка участника.docx" download style="float: right; margin-right: 50px;">
+            <a href="қатысушы өтінімі-заявка участника.docx" download class="down">
                 <img src="public/img/appendWork.png" alt="">
             </a>
             <h1 class="indexH1" style="text-align: left; margin-left: 15%;">Работы:</h1>

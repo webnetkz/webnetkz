@@ -32,12 +32,16 @@ require_once 'app/pdo/connect.php';
             <form action="" method="post" enctype="multipart/form-data">
                 <?php
                    $apCat = '<input type="submit" class="btn" name="apCat" value="Добавить категорию">';
-                   $apPost = '<input type="submit" class="btn" name="apPost" value="Добавить пост">';
+                   $apPost = '<input type="submit" class="btn" name="apPost" value="Добавить участника">';
                    $apArc = '<input type="submit" class="btn" name="apArc" value="Добавить в архив">';
                    $apCatValue = 
                    '<input type="text" class="inp" name="apCatValueK" placeholder="Новая категория на Каз.">
                    <br>
                    <input type="text" class="inp" name="apCatValueR" placeholder="Новая категория на рус.">
+                   <br>
+                   <input type="text" class="inp" name="apCatValueD" placeholder="Дата проведения">
+                   <br>
+                   <input type="file" class="inp" name="file">
                    <br>
                    <input type="submit" value="Добавить" class="btn">';
 
@@ -63,12 +67,9 @@ require_once 'app/pdo/connect.php';
                     <br>
                     <input type="submit" value="Добавить" class="btn">';
                 
-                $sqlArc = 'SELECT * FROM `post`';
-                $resArc = $pdo->query($sqlArc);
-                $resArc = $resArc->fetchAll(PDO::FETCH_ASSOC);
 
-                foreach($resArc as $k => $v) {
-                    $apArcValue .= '<input type="submit" class="btn" name="apArcGo" style="display: block" value="'.$v['header'].'">';
+                foreach($resGetCat as $k => $v) {
+                    $apArcValue .= '<input type="submit" class="btn" name="apArcGo" style="display: block" value="'.$v['titlekaz'].' / '.$v['title'].'">';
                 }
                    
                 if(!empty($_POST['apCat'])) {
@@ -90,11 +91,21 @@ require_once 'app/pdo/connect.php';
                     echo $apArcValue;
                 }
 
-                if((!empty($_POST['apCatValueK']) && (!empty($_POST['apCatValueR'])))) {
+                if((!empty($_POST['apCatValueK']) && (!empty($_POST['apCatValueR'])) && (!empty($_POST['apCatValueD'])) && (!empty($_FILES['file'])))) {
                     $titlekaz = $_POST['apCatValueK'];
                     $title = $_POST['apCatValueR'];
+                    $date = $_POST['apCatValueD'];
 
-                    $sqlApCat = 'INSERT INTO `categories` (`title`, `titlekaz`) VALUE("'.$title.'", "'.$titlekaz.'");';
+                        // Проверяем, загрузил ли пользователь файл
+                        $fileName = $_FILES['file']['name'];
+                        $fileTmp = $_FILES['file']['tmp_name'];
+                    
+                        // Директория для размещения файла
+                        $destiation_dir = 'public/img/konk/'.$fileName;
+                        // Перемещаем файл в желаемую директорию
+                        move_uploaded_file($fileTmp, $destiation_dir );
+
+                    $sqlApCat = 'INSERT INTO `categories` (`title`, `titlekaz`, `firstDate`, `src`) VALUE("'.$title.'", "'.$titlekaz.'", "'.$date.'", "'.$destiation_dir.'");';
                     $resApCat = $pdo->query($sqlApCat);
                 }
                 if((!empty($_POST['apPostValueHeader']) && (!empty($_POST['apPostValueText'])) && (!empty($_POST['catPost'])) && (!empty($_FILES['file'])))) {

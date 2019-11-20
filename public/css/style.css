@@ -20,16 +20,16 @@ body {
 }
 .nS {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.7);
 }
 #content {
     position: absolute;
     width: 80%;
     margin-left: 10%;
-    height: 1000px;
+    margin-bottom: 10%;
     left: 0;
-    top: 0;
-    background: rgba(255, 255, 255, 0.75);
+    top: 55%;
+    background: rgba(255, 255, 255, 0.75);  
 }
 .fourImg {
     width: 90%;
@@ -48,9 +48,9 @@ header {
     left: 10%;
     margin-bottom: 2em;
     border-radius: 500px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     animation: header 3s infinite;
-    background-color: rgba(63, 105, 230, 0.3);
+    */background-color: rgba(63, 105, 230, 0);
 }
 .header {
     position: relative;
@@ -70,8 +70,8 @@ ul {
     height: 6em;
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    animation: header 1500ms infinite;
-    background-color: rgba(63, 5, 230, 0.3);
+    /*animation: header 1500ms infinite;
+    */background-color: rgba(255, 255, 255, 0.8);
 }
 .menuItem {
     width: 15%;
@@ -80,8 +80,8 @@ ul {
     border-radius: 50px;
     display: inline-block;
     padding: 10px;
-    background-color: rgb(63, 105, 230);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 form {
     text-align: center;
@@ -125,25 +125,8 @@ form {
     background-color: rgba(111, 222, 111, 0.2);
     outline: none;
 }
-.post {
-    box-sizing: border-box;
-    position: relative;
-    width: 80%;
-    left: 10%;
-    height: 20em;
-    margin: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.8);
-}
 h3 {
     text-align: center;
-}
-.imgPost {
-    display: inline-block;
-    height: 15em;
-    margin-right: 10px;
-    float: left;
 }
 .line {
     display: inline;
@@ -156,8 +139,8 @@ footer {
     background-size: cover;
 }
 .carousel {
-    width: 40%;
-    margin-left: 30%;
+    width: 60%;
+    margin-left: 20%;
   }
   
   .carousel-cell {
@@ -205,4 +188,43 @@ p.time {
 p {
     width: 80%;
     margin-left: 10%;
+}
+.down {
+    float: right;
+    margin-right: 50px;
+}
+.cartKonk {
+    display: inline-block;
+    height: 420px;
+    width: 30%;
+    margin-left: 2%;
+    margin-bottom: 2em;
+    border: 3px solid rgb(142,173,233);
+    background-color: rgba(255, 255, 255, 1);
+}
+.imgKonk {
+    width: 96%;
+    height: 290px;
+    margin-left: 2%;
+    margin-top: 0.3em;
+}
+p.konkText {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 0.7em;
+    height: 3em;
+    color: rgba(0, 0, 0, 1);
+}
+hr.konk {
+    width: 90%;
+    margin-left: 5%;
+    border-color: rgb(142,173,233);
+    position: relative;
+    top: 10px;
+}
+.date {
+    position: relative;
+    top: 10px;
+    margin-top: 0;
+    color: rgb(142,173,233);
 }

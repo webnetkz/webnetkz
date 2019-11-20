@@ -29,7 +29,7 @@
     </head>
     <body>
     <!-- Append blocks -->
-            <img src="public/img/header.png" class="header">
+            <img src="public/img/headerSlim.png" class="header">
             <header style="position: fixed; left: 10%; top: 0;">
                 <ul>
                     <li class="menuItem hoverBtn">

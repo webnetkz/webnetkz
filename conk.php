@@ -1,5 +1,5 @@
 <?php
-    /*
+    
     session_start();
 
     // Подключение БД
@@ -8,7 +8,10 @@
     $catSql = "SELECT * FROM `categories`;";
     $catRes = $pdo->query($catSql);
     $catRes = $catRes->fetchAll(PDO::FETCH_ASSOC);
-    */
+    
+    if($catRes) {
+        $x = $catRes;
+    }
     ?>
 <!-- HTML Content -->
 <html>
@@ -29,7 +32,7 @@
     </head>
     <body>
     <!-- Append blocks -->
-            <img src="public/img/header.png" class="header">
+            <img src="public/img/headerSlim.png" class="header">
             <header style="position: fixed; left: 10%; top: 0;">
                 <ul>
                     <li class="menuItem hoverBtn">
@@ -49,8 +52,21 @@
                     </li>
                 </ul>
             </header>
-            <div id="content" style="background: none; margin-top: 30%;">
-
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div id="content">
+                
+                <?php
+                    foreach($x as $k => $v) {
+                        echo '<a href="'.$v['file'].'">';
+                        echo '<div class="cartKonk">';
+                        echo '<img src='.$v['src'].' class="imgKonk">';
+                        echo '<p class="konkText">'.$v['titlekaz'].' / '.$v['title'].'</p>';
+                        echo '<hr class="konk">';
+                        echo '<p class="date">'.$v['firstDate'].'</p>';
+                        echo '</div>';
+                        echo '</a>';
+                    }
+                ?>
             </div>
 
     <!-- JS scripts -->
