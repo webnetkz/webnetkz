@@ -57,14 +57,16 @@
                 
                 <?php
                     foreach($x as $k => $v) {
-                        echo '<a href="'.$v['file'].'">';
-                        echo '<div class="cartKonk">';
-                        echo '<img src='.$v['src'].' class="imgKonk">';
-                        echo '<p class="konkText">'.$v['titlekaz'].' / '.$v['title'].'</p>';
-                        echo '<hr class="konk">';
-                        echo '<p class="date">'.$v['firstDate'].'</p>';
-                        echo '</div>';
-                        echo '</a>';
+                        if($v['arc'] !== '1') {
+                            echo '<a href="'.$v['file'].'">';
+                            echo '<div class="cartKonk">';
+                            echo '<img src='.$v['src'].' class="imgKonk">';
+                            echo '<p class="konkText">'.$v['titlekaz'].' / '.$v['title'].'</p>';
+                            echo '<hr class="konk">';
+                            echo '<p class="date">'.$v['firstDate'].'</p>';
+                            echo '</div>';
+                            echo '</a>';
+                        }
                     }
                 ?>
             </div>

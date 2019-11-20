@@ -1,14 +1,17 @@
 <?php
-    /*
+    
     session_start();
 
     // Подключение БД
     require_once 'app/pdo/connect.php';
 
-    $catSql = "SELECT * FROM `categories`;";
+    $catSql = "SELECT * FROM `post`;";
     $catRes = $pdo->query($catSql);
     $catRes = $catRes->fetchAll(PDO::FETCH_ASSOC);
-    */
+    
+    if($catRes) {
+        $x = $catRes;
+    }
     ?>
 <!-- HTML Content -->
 <html>
@@ -68,6 +71,23 @@
                 <img src="public/img/appendWork.png" alt="">
             </a>
             <h1 class="indexH1" style="text-align: left; margin-left: 15%;">Работы:</h1>
+                <br><br><br>
+            <?php
+                if($x) {
+                    foreach($x as $k => $v) {
+                        echo '<div class="cartKonkP">';
+                        echo '<img src='.$v['src'].' class="imgKonk">';
+                        echo '<p class="konkTextP" style="color: rgb(142,173,233);">"'.$v['catP'].'"</p>';
+                        echo '<p>Участник:</p>';
+                        echo '<p class="konkTextP">'.$v['header'].'</p>';
+                        echo '<p>Руководитель:</p>';
+                        echo '<p class="konkTextP">'.$v['text'].'</p>';
+                        echo '<hr class="konk">';
+                        echo '<p class="date">Рейтинг </p>';
+                        echo '</div>';
+                    }
+                }
+            ?>
         </div>
 
     <!-- JS scripts -->

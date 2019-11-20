@@ -228,3 +228,18 @@ hr.konk {
     margin-top: 0;
     color: rgb(142,173,233);
 }
+.cartKonkP {
+    display: inline-block;
+    height: 530px;
+    width: 30%;
+    margin-left: 2%;
+    margin-bottom: 2em;
+    border: 3px solid rgb(142,173,233);
+    background-color: rgba(255, 255, 255, 1);
+}
+.konkTextP {
+    height: 1em;
+    margin: 4px;
+    font-weight: 300;
+    margin-left: 4em;
+}

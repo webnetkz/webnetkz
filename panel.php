@@ -32,8 +32,8 @@ require_once 'app/pdo/connect.php';
             <form action="" method="post" enctype="multipart/form-data">
                 <?php
                    $apCat = '<input type="submit" class="btn" name="apCat" value="Добавить категорию">';
-                   $apPost = '<input type="submit" class="btn" name="apPost" value="Добавить участника">';
-                   $apArc = '<input type="submit" class="btn" name="apArc" value="Добавить в архив">';
+                   $apPost = '<input type="submit" class="btn" name="apPost" value="Добавить работу участника">';
+                   $apArc = '<input type="submit" class="btn" name="apArc" value="Добавить категорию в архив">';
                    $apCatValue = 
                    '<input type="text" class="inp" name="apCatValueK" placeholder="Новая категория на Каз.">
                    <br>
@@ -59,9 +59,9 @@ require_once 'app/pdo/connect.php';
                     $apPostValue =
                     '<input type="text" class="inp" name="catPost" placeholder="Категория" list="catPost">
                     <br>
-                    <input type="text" class="inp" name="apPostValueHeader" placeholder="Заголовок">
+                    <input type="text" class="inp" name="apPostValueHeader" placeholder="Участник">
                     <br>
-                    <input type="text" class="inp" name="apPostValueText" placeholder="Описание">
+                    <input type="text" class="inp" name="apPostValueText" placeholder="Руководитель">
                     <br>
                     <input type="file" class="inp" name="file">
                     <br>
@@ -69,7 +69,7 @@ require_once 'app/pdo/connect.php';
                 
 
                 foreach($resGetCat as $k => $v) {
-                    $apArcValue .= '<input type="submit" class="btn" name="apArcGo" style="display: block" value="'.$v['titlekaz'].' / '.$v['title'].'">';
+                    $apArcValue .= '<input type="submit" class="btn" name="apArcGo" style="display: block" value="'.$v['titlekaz'].'">';
                 }
                    
                 if(!empty($_POST['apCat'])) {
@@ -119,7 +119,7 @@ require_once 'app/pdo/connect.php';
                     $catP = $_POST['catPost'];
 
                     // Директория для размещения файла
-                    $destiation_dir = 'files/'.$fileName;
+                    $destiation_dir = 'public/img/people/'.$fileName;
                     // Перемещаем файл в желаемую директорию
                     move_uploaded_file($fileTmp, $destiation_dir );
 
@@ -131,7 +131,7 @@ require_once 'app/pdo/connect.php';
                     
                     $delPost = $_POST['apArcGo'];
 
-                    $sqlDelArc = 'UPDATE `post` SET `arc` = 1 WHERE `header` = "'.$delPost.'"';
+                    $sqlDelArc = 'UPDATE `categories` SET `arc` = 1 WHERE `titlekaz` = "'.$delPost.'"';
                     $resDelArc = $pdo->query($sqlDelArc);
                 }
                 echo $apCat .= $apPost .= $apArc;
