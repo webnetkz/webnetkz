@@ -10,6 +10,6 @@
 <br>
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=webnetkz)](https://github.com/webnetkz/github-readme-stats)
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=webnetkz)](https://github.com/webnetkz/github-readme-stats)
-![](https://komarev.com/ghpvc/?username=komarev)
+![](https://komarev.com/ghpvc/?username=webnetkz)
 
 
