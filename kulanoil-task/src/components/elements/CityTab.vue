@@ -1,21 +1,16 @@
 <template>
-    <button> {{ city }}</button>
+    <button :class="class"> {{ city }}</button>
 </template>
   
 <script>  
-    export default {
+    export default
+    {
       name: 'CityTab',
       props: {
         city: {
           type: String,
           required: true
         }
-      },
-      setup() {
-
-        return {
-          
-        };
       },
     }
 </script>
@@ -31,7 +26,8 @@
         text-align: left;
         border: none;
     }
-    button:hover {
+    button:hover,
+    .active {
         cursor: pointer;
         background: var(--vt-c-red);
         color: var(--vt-c-white);

@@ -1,17 +1,36 @@
 <template>
-    <div class="tab-cost-calculation">
+    <div class="tab-courier" @click="changeTab" :class="{ 'active': activeTab === 'courier' }">
         Вызвать курьера
     </div>
-  </template>
+</template>
     
-  <script>  
-      export default {
+<script>
+    import { useStore } from '@/stores/store.js';
+    import { computed } from 'vue';
+
+    export default
+    {
         name: 'CourierCall',
-      }
+        setup()
+        {
+            const store = useStore();
+            const activeTab = computed(() => store.activeTab);
+            
+            const changeTab = () =>
+            {
+                store.activeTab = 'courier';
+            }
+
+            return {
+                activeTab,
+                changeTab,
+            };
+        },
+    }
 </script>
     
 <style scoped>
-    .tab-cost-calculation {
+    .tab-courier {
         position: relative;
         top: 6px;
         width: 172px;
@@ -24,13 +43,17 @@
         text-align: center;
         color: var(--vt-c-black);
         background: var(--vt-c-light-gray);
-        border-top-left-radius: var(--border-radius);
+        user-select: none;
     }
-    .tab-cost-calculation.active {
+    .tab-courier.active {
         background: var(--vt-c-white);
+        top: 0;
+        color: var(--vt-c-red);
     }
     @media (max-width: 1024px) {
-        
+        .tab-courier {
+            padding: 6px 20px;
+        }
     }
 </style>
   

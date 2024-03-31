@@ -1,21 +1,22 @@
 <template>
-    <button> {{ text }}</button>
+    <button :style="{ width: buttonWidth }"> {{ text }}</button>
 </template>
   
 <script>  
-    export default {
+    export default
+    {
       name: 'Button',
-      props: {
-        text: {
+      props:
+      {
+        text:
+        {
           type: String,
           required: true
+        },
+        buttonWidth: {
+          type: String,
+          default: '276px'
         }
-      },
-      setup() {
-
-        return {
-          
-        };
       },
     }
 </script>

@@ -1,7 +1,10 @@
 @import './base.css';
 
 #app {
-  max-width: 1280px;
+  position: absolute;
+  top: 3rem;
+  left: calc(54vw - 640px);
+  width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
@@ -23,9 +26,9 @@ a,
 
 @media (max-width: 1024px) {
   #app {
+    left: -4vw;
     width: 100vw;
-    padding: 1rem;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 

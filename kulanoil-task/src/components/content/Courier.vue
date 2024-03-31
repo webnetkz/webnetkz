@@ -1,7 +1,7 @@
 <template>
     <div class="calculation-container">
         <div class="from-search-container">
-            <SearchInput text="Откуда"/>
+            <SearchInput placeholder="Откуда"/>
             <div class="city-container">
                 <CityTab city="Астана"/>
                 <CityTab city="Алматы"/>
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="to-search-container">
-            <SearchInput text="Куда"/>
+            <SearchInput placeholder="Куда"/>
             <div class="city-container">
                 <CityTab city="Астана"/>
                 <CityTab city="Алматы"/>
@@ -17,27 +17,30 @@
             </div>
         </div>
         <div class="button-container">
-            <Button text="Рассчитать стоимость"/>
+            <Button text="Вызвать курьера"/>
         </div>
     </div>
 </template>
     
 <script>
-    import SearchInput from '../elements/SearchInput.vue';
+import SearchInput from '../elements/SearchInput.vue';
     import Button from '../elements/Button.vue';
     import CityTab from '../elements/CityTab.vue';
   
-    export default {
-        name: 'Calculation',
-        components: {
+
+    export default
+    {
+        name: 'Courier',
+        components:
+        {
             SearchInput,
             Button,
             CityTab,
         },
     }
-  </script>
+</script>
     
-  <style scoped>
+<style scoped>
     .calculation-container {
         display: flex;
         justify-content: space-between;
@@ -69,9 +72,15 @@
     @media (max-width: 1024px) {
         .calculation-container {
             flex-direction: column;
-            width: 96vw;
+            width: 50vw;
+        }
+        .city-container {
+            width: 80vw;
+            margin-bottom: 12px;
+        }
+        .from-search-container::after {
+            background: none;
         }
     }
-    
-  </style>
+</style>
   

@@ -1,22 +1,64 @@
 # Kulanoil-task
+Калькулятор без использования сторонних зависимостей.
+Есть множетво недоработок, которые недопустимы для продакшена.
+Вопросов не было, потому что это тестовое задание.
+
+
+## Структура файлов
+<pre>
+.
+├── App.vue
+├── assets
+│   ├── fonts
+│   │   ├── Mulish-Italic-VariableFont_wght.ttf
+│   │   └── Mulish-VariableFont_wght.ttf
+│   ├── images
+│   │   ├── arrows.svg
+│   │   ├── elements
+│   │   │   └── search.svg
+│   │   └── results
+│   │       ├── clock.svg
+│   │       ├── distance.svg
+│   │       └── tenge.svg
+│   └── styles
+│       ├── base.css
+│       └── main.css
+├── components
+│   ├── CalculatorContainer.vue
+│   ├── TabsContainer.vue
+│   ├── content
+│   │   ├── Calculation.vue
+│   │   ├── Courier.vue
+│   │   ├── Results.vue
+│   │   └── Tracking.vue
+│   ├── elements
+│   │   ├── Button.vue
+│   │   ├── CityTab.vue
+│   │   └── SearchInput.vue
+│   └── tabs
+│       ├── CostCalculation.vue
+│       ├── CourierCall.vue
+│       └── TrackPackage.vue
+├── main.js
+└── stores
+    └── store.js
+</pre>
 
 ## Установка
 
-1. Сначала убедитесь, что у вас установлен Node.js. Можно загрузить его с [официального сайта](https://nodejs.org/).
-
-2. Склонируйте репозиторий:
+1. Склонируйте репозиторий:
 
 ```bash
 git clone https://github.com/webnetkz/webnetkz.git
 ```
 
-3. Перейдите в каталог проекта:
+2. Перейдите в каталог проекта:
 
 ```bash
-cd kulanoil-task
+cd webnetkz/kulanoil-task
 ```
 
-4. Установите зависимости проекта, используя npm:
+3. Установите зависимости проекта, используя npm:
 
 ```bash
 npm i
@@ -27,5 +69,7 @@ npm i
 Чтобы запустить проект, выполните следующую команду:
 
 ```bash
-npm run serve
+npm run dev
 ```
+
+Это запустит проект локально для разработки

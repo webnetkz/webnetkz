@@ -1,22 +1,27 @@
 <template>
     <div class="search-input-container">
-        <img src="../../assets/images/elements/search.svg" alt="search image">
-        <input type="text" class="search-input" :value="text">
+        <input type="text" class="search-input" :value="text" :placeholder="placeholder" :style="{ width: inputWidth }">
     </div>
 </template>
   
 <script>  
-    export default {
+    export default
+    {
       name: 'SearchInput',
-      props: {
-        text: {
+      props:
+      {
+        text:
+        {
           type: String,
+        },
+        placeholder:
+        {
+          type: String,
+        },
+        inputWidth: {
+          type: String,
+          default: '350px'
         }
-      },
-      setup() {
-
-        return {
-        };
       },
     }
 </script>
@@ -25,13 +30,18 @@
   .search-input-container {
     position: relative;
   }
-  .search-input-container > img {
+  .search-input-container::after {
+    content: "";
     position: absolute;
     top: 12px;
     left: 12px;
+    width: 24px;
+    height: 24px;
+    background: url("../../assets/images/elements/search.svg");
   }
   .search-input {
-    min-width: 350px;
+    min-width: 150px;
+    width: 350px;
     height: 48px;
     outline: none;
     padding: 12px 16px 12px 48px;
@@ -39,13 +49,19 @@
     border-radius: var(--border-radius);
     font-family: var(--font-family);
   }
+  .search-input:focus {
+    border-color: var(--vt-c-red);
+    font-size: 18px;
+  }
+  .search-input::placeholder {
+    color: var(--vt-c-black);
+  }
   @media (max-width: 1024px) {
     .search-input-container {
-      width: 200px;
+      width: 50vw;
     }
-    .search-input {
-      min-width: 75vw;
-      width: 200px;
+    .search-input-container .search-input {
+      width: 76vw!important;
     }
   }
 </style>

@@ -1,17 +1,30 @@
 <template>
-    <div class="tab-track-package">
+    <div class="tab-track-package" @click="changeTab" :class="{ 'active': activeTab === 'tracking' }">
         Отследить посылку
     </div>
 </template>
     
-<script>  
-    export default {
+<script>
+    import { useStore } from '@/stores/store.js';
+    import { computed } from 'vue';
+
+    export default
+    {
         name: 'TrackPackage',
-        setup() {
-  
-          return {
+        setup()
+        {
+            const store = useStore();
+            const activeTab = computed(() => store.activeTab);
             
-          };
+            const changeTab = () =>
+            {
+                store.activeTab = 'tracking';
+            }
+
+            return {
+                activeTab,
+                changeTab,
+            };
         },
     }
 </script>
@@ -30,16 +43,30 @@
         text-align: center;
         color: var(--vt-c-black);
         background: var(--vt-c-light-gray);
-        border-top-right-radius: var(--border-radius)
+        border-top-right-radius: var(--border-radius);
+        user-select: none;
+    }
+    .tab-track-package.active {
+        background: var(--vt-c-white);
+        top: 0;
+        color: var(--vt-c-red);
     }
     .tab-track-package::after {
         content: "";
         position: absolute;
-        top: -10%;
+        top: -15%;
         right: -600px;
         width: 600px;
-        height: 110%;
+        height: 115%;
         background: var(--vt-c-light-gray);
+    }
+    .tab-track-package.active::after {
+        width: 0;
+    }
+    @media (max-width: 1024px) {
+        .tab-track-package {
+            padding: 6px 20px;
+        }
     }
 </style>
   
